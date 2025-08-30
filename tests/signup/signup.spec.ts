@@ -53,6 +53,10 @@ test.describe("Signup page", () => {
         await expect(signupPage.passwordErrorIcon()).toBeVisible();
     });
 
+    /*
+     * VALIDATION FOR EMAIL FIELD 
+     */
+    
     const invalidEmails = [
         "usernameonly",
         "usernameonly" + '@',
@@ -112,7 +116,6 @@ test.describe("Signup page", () => {
         });
     }
 
-
     test("should display an error when email is a long string (300+ characters)", async ({ signupPage }) => {
         const email = `${faker.string.alphanumeric(300)}@email.com`;
         const firstName = faker.person.firstName();
@@ -126,7 +129,7 @@ test.describe("Signup page", () => {
 
 
     /*
-     *  FIRST NAME AND LAST NAME FIELDS
+     *  VALIDATION FOR FIRST NAME AND LAST NAME FIELDS
      */
 
     const invalidNames = [
@@ -196,7 +199,7 @@ test.describe("Signup page", () => {
     });
 
     /*
-     * PASSWORD FIELD
+     * VALIDATION FOR PASSWORD FIELD
      */
 
     test("should not accept passwords that don't meet format requirements", async ({ signupPage }) => {
@@ -213,8 +216,6 @@ test.describe("Signup page", () => {
 
         // Assert that alert icon for password is displayed
         await expect(signupPage.passwordErrorIcon()).toBeVisible();
-
-
     });
 
     test("should unmask password when Show password button is clicked", async ({ signupPage }) => {

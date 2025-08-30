@@ -6,7 +6,6 @@ export default class VerifyEmailPage {
     readonly searchInEmailLink: Locator;
     readonly resendEmailLink: Locator;
     
-    
     constructor(page: Page){
         this.page = page;
         this.header = page.getByRole('heading', { name: 'Verify your email' });

@@ -131,14 +131,4 @@ test.describe("Sign in page", () => {
         await expect(signinPage.passwordErrorIcon()).toBeVisible();
     });
 
-        // const invalidEmails = [
-    //     "usernameonly",
-    //     "usernameonly" + '@',
-    //     "gmail.com",
-    //     "email add@abc.com",
-    //     ".email@email.com",
-    //     "abc..name@email.com",
-    //     "email@add@email.com"
-    // ];
-
 });

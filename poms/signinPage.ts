@@ -17,34 +17,33 @@ export default class SigninPage {
 
     // Dynamic locators
     errorMessage = (errorMessage: string) => this.page.getByText(errorMessage);
-
     emailErrorIcon = () => this.page.locator('input[name="email"]').locator('xpath=ancestor::div[contains(@class, "RyuInputBaseRoot")]').locator('.RyuIconSvg--alert-octagon');
     passwordErrorIcon = () => this.page.locator('input[name="password"]').locator('xpath=ancestor::div[contains(@class, "RyuInputBaseRoot")]').locator('.RyuIconSvg--alert-octagon');
     
     // Actions
     async goto() {
         await this.page.goto("/sign-in");
-    }
+    };
 
     async clickContinue(){
         await this.continueButton.click();
-    }
+    };
 
     async clickSignIn(){
         await this.signInButton.click();
-    }
+    };
 
     async clickSignUpLink(){
         await this.page.locator('[data-test-id="sign-up-link"]').click();
-    }
+    };
 
     async useADifferentEmail(){
         await this.page.locator('[data-test-id="use-a-different-email-link"]').click();
-    }
+    };
 
     async resetPassword(){
         await this.page.getByRole('link', { name: 'Reset password' }).click();
-    }
+    };
 
     async signinUser({
         email,
@@ -57,7 +56,7 @@ export default class SigninPage {
         await this.clickContinue();
         await this.enterPassword({ password });
         await this.clickSignIn();
-    }
+    };
 
     async enterEmail({
         email

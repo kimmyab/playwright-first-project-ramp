@@ -47,7 +47,7 @@ export default class SignupPage {
     // Actions
     async goto() {
         await this.page.goto("/sign-up");
-    }
+    };
   
     async signupUser({
         email,
@@ -101,15 +101,15 @@ export default class SignupPage {
 
     async hidePassword(){
         await this.hidePasswordButton().click();
-    }
+    };
 
     async showPassword(){
         await this.showPasswordButton().click();
-    }
+    };
 
     async pressEnter(){
         await this.page.keyboard.press('Enter');
-    }
+    };
 
     async clickStartApplicationButton(){
         await this.startApplicationButton.click();
