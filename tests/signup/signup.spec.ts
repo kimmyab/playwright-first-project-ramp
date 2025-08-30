@@ -10,7 +10,7 @@ test.describe("Signup page", () => {
         await signupPage.goto();
     });
 
-    test("should successfully sign up using correct details", async ({ page, signupPage, verifyEmailPage }) => {
+    test("should successfully sign up using correct details", { tag: "@smoke" }, async ({ page, signupPage, verifyEmailPage }) => {
         const email = faker.internet.username() + "@abcdef.com";
         const firstName = faker.person.firstName();
         const lastName = faker.person.lastName();
