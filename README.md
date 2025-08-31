@@ -5,7 +5,7 @@ The project is integrated with GitHub Actions for continuous integration (CI), s
 
 ## ⚙️ Installation
 ### Installation for VSCode
-- If using VSCode, follow this guide instead: [Playwright Official Guide](https://playwright.dev/docs/getting-started-vscode)
+- If using VSCode, follow this guide: [Playwright Official Guide](https://playwright.dev/docs/getting-started-vscode)
 
 
 ### Installation
@@ -49,7 +49,7 @@ npx playwright test signup.spec.ts --headed
 - **tests/signin/signin.spec.ts**: Tests for the login (sign-in) process handling invalid credentials
 
 ## 📝 Notes
-1. No test for real login as this is an actual web application in Production
+1. No test for real login as business account is required for succesful signup and verification
 2. May encounter rate limiting during test execution
 
 ## 📘 Future considerations
